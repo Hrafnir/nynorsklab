@@ -1,5 +1,7 @@
 # Nynorsklab
 
+**Opne nettsida: https://hrafnir.github.io/nynorsklab/**
+
 Eit undervisningsverktøy for nynorsk på ungdomstrinnet: grammatikkøvingar, ordpar, direkte ordbokoppslag og ein regelbasert skriveverkstad.
 
 ## Takk til Apertium
@@ -46,7 +48,7 @@ Dette regenererer JSON-data og kjeldearkivet. `dist/lexicon-meta.js` speglar `di
 
 ## Publisering
 
-`dist/` kan leggjast på ein vanleg statisk nettstad. Denne GitHub-versjonen inneheld ikkje private Sites-innstillingar, nøklar eller elevtekstar. GitHub-repositoryet publiserer kjeldekoden; GitHub Pages er ikkje automatisk aktivert.
+`dist/` kan leggjast på ein vanleg statisk nettstad. Denne GitHub-versjonen inneheld ikkje private Sites-innstillingar, nøklar eller elevtekstar. GitHub Pages publiserer `dist/` automatisk når `main` blir oppdatert, via `.github/workflows/pages.yml`.
 
 ## Lisens
 
