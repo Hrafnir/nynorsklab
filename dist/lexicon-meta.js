@@ -1,0 +1,30 @@
+const LEX_META = {
+  "source": "Apertium apertium-nno-nob",
+  "sourceURL": "https://github.com/apertium/apertium-nno-nob",
+  "commit": "af921d87acad00f45e79a5b7f17d71068adb5ec8",
+  "date": "2026-10-20",
+  "license": "GPL-2.0-or-later",
+  "words": 196116,
+  "names": 217520,
+  "total": 413636,
+  "sourceEntries": 296674,
+  "uniqueBokmal": 135673,
+  "uniqueNynorsk": 125498,
+  "different": 62364,
+  "skipped": {
+    "technical_or_empty_expansions": 57,
+    "regex_entries": 48
+  },
+  "columns": [
+    "bokmal",
+    "nynorsk",
+    "wordClass",
+    "direction"
+  ],
+  "direction": {
+    "1": "nynorsk to bokmal only",
+    "2": "bokmal to nynorsk only",
+    "3": "both"
+  },
+  "limitations": "Lemma pairs, not a complete translation engine. No morphological generation or contextual lexical selection. Source spelling and variants preserved; consult Ordbøkene for current norms. Regex rules and internal markers excluded."
+};

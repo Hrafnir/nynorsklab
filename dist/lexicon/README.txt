@@ -1,0 +1,149 @@
+Norwegian Nynorsk and Norwegian Bokmål
+
+apertium-nno-nob
+===============================================================================
+
+This is an Apertium language pair for translating between Norwegian
+Nynorsk and Norwegian Bokmål. What you can use this language package for:
+
+* Translating between Nynorsk and Bokmål, including variants:
+    * Default nynorsk variant `nno` is "a-mål" with first person
+      plural "me"
+    * Nynorsk "e-mål" with first person plural "vi": `nno_e`
+    * Nynorsk "e-mål" with first person plural "me": `nno_e_me`
+    * Nynorsk "a-mål" with first person plural "vi": `nno_a_vi`
+* Morphological analysis of Nynorsk and Bokmål
+* Part-of-speech tagging of Nynorsk and Bokmål
+
+For information on the latter two points, see subheading "For more
+information" below.
+
+[![Build Status](https://travis-ci.org/apertium/apertium-nno-nob.png)](https://travis-ci.org/apertium/apertium-nno-nob)
+
+Requirements
+===============================================================================
+
+You will need the following software installed:
+
+* lttoolbox (>= 3.5.0)
+* apertium (>= 3.6.0)
+* vislcg3 (>= 1.3.0)
+* apertium-lex-tools (>= 0.2.5)
+
+If this does not make any sense, we recommend you look at: apertium.org
+
+Compiling
+===============================================================================
+
+Given the requirements being installed, you should be able to just run:
+
+```sh
+$ ./configure
+$ make
+$ sudo make install
+```
+
+Use ./autogen.sh instead of ./configure if you're compiling from
+git.
+
+Testing
+===============================================================================
+
+If you are in the source directory after running make, the following
+commands should work:
+
+```sh
+$ echo "Eg vil gå ein tur" | apertium -d . nno-nob
+Jeg vil gå en tur
+```
+
+```sh
+$ echo "Jeg vil gå en tur" | apertium -d . nob-nno
+Eg vil gå ein tur
+```
+
+After installing somewhere in `$PATH`, you should be able to do e.g.
+
+```sh
+$ echo "Jeg vil gå en tur" | apertium nob-nno
+Eg vil gå ein tur
+```
+
+The following command runs tests which are on the Apertium wiki page:
+
+```sh
+$ ./regression-tests.sh
+```
+
+Files and data
+===============================================================================
+
+| File name                    | Description                                            |
+| ---------------------------- | ------------------------------------------------------ |
+| apertium-nno-nob.nno-nob.dix | Bilingual dictionary (bidirectional)                   |
+| apertium-nno-nob.nno-nob.lrx | Lexical selection rules for translating into Bokmål    |
+| apertium-nno-nob.nno-nob.t1x | Chunking transfer rules for translating into Bokmål    |
+| apertium-nno-nob.nno-nob.t2x | Interchunk transfer rules for translating into Bokmål  |
+| apertium-nno-nob.nno-nob.t3x | Postchunk transfer rules for translating into Bokmål   |
+| apertium-nno-nob.nob-nno.lrx | Lexical selection rules for translating into Nynorsk   |
+| apertium-nno-nob.nob-nno.t1x | Chunking transfer rules for translating into Nynorsk   |
+| apertium-nno-nob.nob-nno.t2x | Interchunk transfer rules for translating into Nynorsk |
+| apertium-nno-nob.nob-nno.t3x | Postchunk transfer rules for translating into Nynorsk  |
+| modes.xml                    | Translation modes                                      |
+
+For more information
+===============================================================================
+
+* https://wiki.apertium.org/wiki/Installation
+* https://wiki.apertium.org/wiki/apertium-nno-nob
+* https://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
+* https://wiki.apertium.org/wiki/Constraint_Grammar
+* http://nn.wikipedia.org/wiki/Wikipedia:Wikiprosjekt_Maskinomsetjing_frå_bokmål
+  (in Norwegian)
+
+Citing
+===============================================================================
+
+Academic users of this package are requested to cite the following article:
+
+```BibTeX
+@inproceedings{unhammer2009rfr,
+  address = {Alicante},
+  author = {Unhammer, Kevin Brubeck and Trosterud, Trond},
+  booktitle = {{Proceedings of the First International Workshop on Free/Open-Source Rule-Based Machine Translation}},
+  editor = {Pérez-Ortiz, Juan Antonio and Sánchez-Martínez, Felipe and Tyers, Francis M.},
+  pages = {35--42},
+  publisher = {Universidad de Alicante. Departamento de Lenguajes y Sistemas Informáticos},
+  title = {{Reuse of Free Resources in Machine Translation between Nynorsk and Bokm{\aa}l}},
+  url = {http://hdl.handle.net/10045/12025},
+  year = 2009
+}
+```
+
+To cite Apertium, please use the following:
+
+```BibTeX
+@article{apertium,year={2011},
+  issn={0922-6567},
+  journal={Machine Translation},
+  volume={25},
+  number={2},
+  doi={10.1007/s10590-011-9090-0},
+  title={Apertium: a free/open-source platform for rule-based machine translation},
+  url={http://dx.doi.org/10.1007/s10590-011-9090-0},publisher={Springer Netherlands},
+  keywords={Free/open-source machine translation; Rule-based machine translation; Apertium; Shallow transfer; Finite-state transducers},
+  author={Forcada, Mikel~L. and Ginestí-Rosell, Mireia and Nordfalk, Jacob and O’Regan, Jim and Ortiz-Rojas, Sergio and Pérez-Ortiz, Juan~Antonio and Sánchez-Martínez, Felipe and Ramírez-Sánchez, Gema and Tyers, Francis~M.},
+  pages={127-144},
+  language={English}
+}
+```
+
+Help and support
+===============================================================================
+
+If you need help using this language pair or data, you can contact:
+
+* Mailing list: apertium-stuff@lists.sourceforge.net
+* IRC: #apertium on [irc.oftc.net](https://oftc.net/)
+
+See also the file AUTHORS included in this distribution.
