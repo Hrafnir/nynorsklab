@@ -14,3 +14,5 @@
 
 /* Word examples need a wider badge than single-character icons. */
 .card-symbol.exercise-symbol{width:fit-content;min-width:43px;max-width:100%;height:auto;min-height:43px;padding:8px 12px;font-size:22px;line-height:1.25;white-space:nowrap}
+
+.practice-options{display:grid;grid-template-columns:minmax(210px,1fr) 2fr;gap:24px;align-items:center}.practice-options p{margin:0}.explanation-choices{grid-template-columns:1fr;margin-bottom:16px}.choice.selected{outline:2px solid var(--green)}@media(max-width:570px){.practice-options{grid-template-columns:1fr;gap:12px}}

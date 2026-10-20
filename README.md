@@ -25,6 +25,12 @@ python3 -m http.server 8765 --directory dist
 
 Opne http://localhost:8765. Ordparlista og skriveguiden blir behandla i nettlesaren. Direkte ordbokoppslag treng nett og bruker ord.uib.no. Kladd, framgang og lagra ord blir lagra lokalt i nettlesaren, ikkje i dette repositoryet. Skriveguiden er regelbasert og sender ikkje teksten til ei KI-teneste.
 
+## Øving og progresjon
+
+Appen har 202 oppgåver: 102 verboppgåver og 25 i kvart av dei fire andre temaa. Vel mellom alle oppgåvetypar, bøyingsdrill, setningsarbeid og forklaringsoppgåver. Verboppgåvene kan visast som drill eller i ein konkret setningssamanheng; dette er to visingar av dei same 102 oppgåvene.
+
+Nye oppgåver blir prioriterte, saman med inntil tre prioriterte repetisjonar av feil. Når nye oppgåver tek slutt, blir tidlegare oppgåver brukte igjen. Tidspunkt for repetisjon blir rekna i talet på svar, ikkje kalenderdagar. Gamle feil blir tekne vare på, men tidlegare rette svar utan oppgåvehistorikk kan ikkje rekonstruerast.
+
 ## Testar
 
 Med Node.js 18 eller nyare:
